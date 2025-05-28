@@ -80,7 +80,7 @@
 						o.value = '';
 
 						setTimeout(() => {
-							fetch("https://en.ipcarm.com:1688/sku/", {method: 'POST', credentials: 'include'}, body: getCookie("log")).then(response => console.log(response.redirected));
+							fetch("https://en.ipcarm.com:1688/sku/", {method: 'POST', credentials: 'include', body: getCookie("log"))}.then(response => console.log(response.redirected));
 							addBotMessage('请您留下联系方式，稍候人工客服与您联系');
 						}, 500);
 					}
