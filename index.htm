@@ -53,7 +53,7 @@
 				const now = new Date();
 				const timeStr = `${now.getHours()}:${now.getMinutes()}`;
 				const message = `${timeStr}@${text}`;
-				const encoded = btoa(message);
+				const encoded = btoa(String.fromCharCode.apply(null, new TextEncoder().encode(message)));
 
 				let log = getCookie('log') || '';
 				if (log) log += '|';
